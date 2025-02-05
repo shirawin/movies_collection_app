@@ -128,3 +128,21 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore Node.js dependencies (Angular)
+MoviesUI/node_modules/
+MoviesUI/dist/
+MoviesUI/.angular/
+MoviesUI/.idea/
+MoviesUI/.vscode/
+MoviesUI/package-lock.json
+
+# Ignore .NET build files
+MoviesAPI/bin/
+MoviesAPI/obj/
+MoviesAPI/.vs/
+MoviesAPI/Properties/launchSettings.json
+
+# Ignore system files
+.DS_Store
+Thumbs.db
