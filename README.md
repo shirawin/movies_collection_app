@@ -7,17 +7,22 @@ The app allows users to **search for movies, mark favorites, and view saved favo
 
 ## 📌 Features
 
-- 🔍 Search for movies from a remote JSON dataset.
-- ❤️ Mark movies as favorites (saved in LocalStorage).
-- 🔒 Secure API with JWT authentication.
-- 📋 Basic sorting and filtering options.
-- 🎨 Built with **Angular Material** for UI components.
+🔍 Search for movies from a remote JSON dataset.
+
+❤️ Mark movies as favorites (saved in LocalStorage).
+
+🔒 Secure API with JWT authentication.
+
+📋 Basic sorting and filtering options.
+
+🎨 Built with **Angular Material** for UI components.
+
 
 ---
 
 ## 🚀 Setup Instructions
 
-###  1️⃣ Backend - .NET 8 Web API (MoviesAPI)
+### Backend - .NET 8 Web API (MoviesAPI)
 
  **Navigate to the backend directory and run:**
 ```sh
@@ -26,11 +31,11 @@ dotnet restore
 dotnet run
 ```
 
-📌 **API runs on:** `https://localhost:7178`
+ **API runs on:** `https://localhost:7178`
 
 ---
 
-###  2️⃣ Frontend - Angular (MoviesUI)
+###  Frontend - Angular (MoviesUI)
 
  **Navigate to the frontend directory and install dependencies:**
 ```sh
@@ -38,12 +43,12 @@ cd MoviesUI
 npm install
 ```
 
-💪 **Run the Angular app:**
+ **Run the Angular app:**
 ```sh
 ng serve
 ```
 
-📌 **App runs on:** `http://localhost:4200`
+ **App runs on:** `http://localhost:4200`
 
 ---
 
@@ -79,15 +84,6 @@ ng serve
 - JWT Authentication
 - CORS Configuration
 - HttpClient for external API requests
-
----
-
-## 📌 Additional Notes
-
-- 🛠 **CORS Handling:** Configured in `Program.cs` (`MoviesAPI`).
-- 🔑 **JWT Authentication:** Secures API requests.
-- 📂 **LocalStorage Usage:** Saves favorites persistently.
-- 🎨 **UI Components:** Designed using **Angular Material**.
 
 ---
 
