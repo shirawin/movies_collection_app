@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>My Favorite Movies</h2>
+<mat-dialog-content>
+  <div *ngIf="favoriteMovies.length === 0">
+    <p>No favorite movies added yet.</p>
+  </div>
+  <div class="movies-container">
+    <div class="movie-card" *ngFor="let movie of favoriteMovies">
+      <h3>{{ movie.title }}</h3>
+      <p>Genre: {{ movie.genre }}</p>
+      
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="closeDialog()">Close</button>
+</mat-dialog-actions>

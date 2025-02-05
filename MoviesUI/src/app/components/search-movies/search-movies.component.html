@@ -1,0 +1,39 @@
+
+
+<div class="search-container">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search for a movie</mat-label>
+    <input matInput type="text" [(ngModel)]="searchQuery" (keyup.enter)="searchMovies()" />  
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="search-btn" (click)="searchMovies()">Search</button> <button class="btn-favorite" mat-raised-button color="accent" (click)="openFavoritesDialog()">Show Favorites</button>
+
+</div>
+
+<div class="sort-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Sort by</mat-label>
+    <mat-select [(value)]="selectedSort" (selectionChange)="sortMovies()">
+      <mat-option value="none">No Sorting</mat-option> 
+      <mat-option value="title">Title (A-Z)</mat-option>
+      <mat-option value="year">Year (Newest First)</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="movies-container">
+    <div class="movie-card" *ngFor="let movie of movies">
+        <img [src]="movie.poster" alt="{{ movie.title }}" />
+        <h3>{{ movie.title }}</h3>
+        <p>Year: {{ movie.year }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+
+
+        <mat-icon 
+          [ngClass]="{'favorite': isFavorite(movie)}" 
+          (click)="toggleFavorite(movie)"
+          matTooltip="{{ isFavorite(movie) ? 'Remove from favorites' : 'Add to favorites' }}">
+          {{ isFavorite(movie) ? 'favorite' : 'favorite_border' }}
+        </mat-icon>
+
+    </div>
+</div>
